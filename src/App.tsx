@@ -1,24 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
 
+import Card from './Components/Cards'
+
+interface IState {
+  people:{
+    name:string
+    age:number
+    url:string
+    note?:string
+  }[]
+
+}
+
 function App() {
+
+
+ const [people, setPeople] = useState<IState["people"]>([
+    {
+      name: 'Laisa Pereira',
+      url: "https://imagensemoldes.com.br/wp-content/uploads/2018/05/Meu-Malvado-Favorito-Minions-14-PNG.png",
+      age:18,
+      note: "Gosta de bolo"
+
+    }
+
+
+
+ ])
+
+
+
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1>People Invited to my party</h1>
+        <Card people={people} />
     </div>
   );
 }
