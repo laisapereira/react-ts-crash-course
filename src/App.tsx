@@ -1,9 +1,12 @@
 import React, {useState} from 'react';
 import './App.css';
 
-import Card from './Components/Cards'
+// adicionando o setPeople no AddList porque a gente precisa manipular e transformar o componente anexando coisas novas a ele
 
-interface IState {
+import Card from './Components/Cards'
+import AddTolist from './Components/AddToList'
+
+export interface IState {
   people:{
     name:string
     age:number
@@ -36,6 +39,11 @@ function App() {
     <div className="App">
         <h1>People Invited to my party</h1>
         <Card people={people} />
+
+        <div >
+
+        </div>
+        <AddTolist people={people} setPeople={setPeople} />
     </div>
   );
 }

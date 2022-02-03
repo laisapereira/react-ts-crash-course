@@ -1,17 +1,8 @@
 import React from 'react';
+import { IState } from '../../App'
 
-interface IProps {
-    people:{
-      name:string
-      age:number
-      url:string
-      note?:string
-    }[]
-  
-  }
-  
 
-const CardList: React.FC<IProps> = ({people}) => {
+const CardList: React.FC<IState> = ({people}) => {
 
     const renderList = (): JSX.Element[] => {
      return people.map(person => {
