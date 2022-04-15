@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 
 import { IState as Props } from '../../App'
 
-interface IProps {
-  setPeople: React.Dispatch<React.SetStateAction<Props["people"]>>
+interface IProps { 
+  setPeople: React.Dispatch<React.SetStateAction<Props["people"]>>,
   people: Props["people"]
+ 
 }
 
 const AddToList:React.FC<IProps> = (people, setPeople)=>{
@@ -34,7 +35,7 @@ const AddToList:React.FC<IProps> = (people, setPeople)=>{
                 img: input.img,
                 note: input.note
             }
-        ]);
+          ]);
 
         setInput({
             name: "",

@@ -43,7 +43,7 @@ function App() {
         <div >
 
         </div>
-        <AddTolist people={people} setPeople={setPeople} />
+        <AddTolist people={people.map} setPeople={setPeople} />
     </div>
   );
 }
